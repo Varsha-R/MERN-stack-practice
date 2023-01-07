@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import NewPlace from "./places/pages/NewPlace";
+import UserPlaces from "./places/pages/UserPlaces";
 import Users from "./user/pages/Users";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
 
@@ -18,6 +19,10 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Users />
+          </Route>
+          {/* Dynamic routing! Since userId is dynamically passed */}
+          <Route path="/:userId/places" exact>
+            <UserPlaces />
           </Route>
           <Route path="/places/new" exact>
             <NewPlace />
