@@ -8,7 +8,7 @@ const Users = () => {
       id: "u1",
       name: "Varsha",
       image:
-        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/bust-in-silhouette_1f464.png",
+        "https://storage.googleapis.com/kaggle-avatars/images/1409885-kg.jpg",
       places: 3,
     },
   ];
