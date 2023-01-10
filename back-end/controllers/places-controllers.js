@@ -65,7 +65,10 @@ const createPlace = async (req, res, next) => {
     title,
     description,
     address,
-    location: coordinates,
+    location: {
+      lat: 342.322,
+      lng: 322.32,
+    },
     image:
       "https://www.shainblumphoto.com/wp-content/uploads/2015/11/sffoggynightggb1200.jpg",
     creator,
