@@ -46,8 +46,7 @@ const signup = async (req, res, next) => {
     name,
     email,
     password,
-    image:
-      "https://storage.googleapis.com/kaggle-avatars/images/1409885-kg.jpg",
+    image: req.file.path,
     places: [],
   });
 

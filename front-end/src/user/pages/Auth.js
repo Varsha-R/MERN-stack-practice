@@ -37,7 +37,7 @@ const Auth = () => {
   );
 
   const authSubmitHandler = async (event) => {
-    console.log("In authSubmitHandler: ", formState.inputs);
+    // console.log("In authSubmitHandler: ", formState.inputs);
     event.preventDefault();
 
     if (isLoginMode) {
@@ -62,7 +62,6 @@ const Auth = () => {
         formData.append("name", formState.inputs.name.value);
         formData.append("password", formState.inputs.password.value);
         formData.append("image", formState.inputs.image.value);
-        console.log(formData);
         const responseData = await sendRequest(
           "http://localhost:5001/api/users/signup",
           "POST",
