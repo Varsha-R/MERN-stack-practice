@@ -24,7 +24,7 @@ const signup = async (req, res, next) => {
     );
   }
 
-  const { name, email, password, places } = req.body;
+  const { name, email, password } = req.body;
 
   let existingUser;
   try {
@@ -48,7 +48,7 @@ const signup = async (req, res, next) => {
     password,
     image:
       "https://storage.googleapis.com/kaggle-avatars/images/1409885-kg.jpg",
-    places,
+    places: [],
   });
 
   try {
