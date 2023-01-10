@@ -80,10 +80,7 @@ const createPlace = async (req, res, next) => {
   }
 
   if (!user) {
-    const error = new HttpError(
-      "Couldn't find user for provided ID " + err,
-      500
-    );
+    const error = new HttpError("Couldn't find user for provided ID ", 500);
     return next(error);
   }
 
