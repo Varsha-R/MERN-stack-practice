@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 
 import Input from "../../shared/components/FormElements/Input";
 import Button from "../../shared/components/FormElements/Button";
@@ -35,6 +36,8 @@ const NewPlace = () => {
     false
   );
 
+  const history = useHistory();
+
   const placeSubmitHandler = async (event) => {
     event.preventDefault();
     console.log(formState.inputs);
@@ -52,7 +55,8 @@ const NewPlace = () => {
           "Content-Type": "application/json",
         }
       );
-      // Redirect to different page
+      // Redirect to different page like below
+      history.push("/");
     } catch (err) {}
   };
 
